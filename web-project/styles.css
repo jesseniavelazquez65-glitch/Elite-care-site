@@ -1,0 +1,318 @@
+:root {
+    --color-text: #222;
+    --color-muted: #555;
+    --color-border: #e5e5e5;
+    --color-bg: #ffffff;
+    --color-surface: #fafafa;
+    --color-primary: #111;
+    --color-primary-hover: #000;
+}
+
+/* ===== Base / Reset ===== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.hero p {
+    color: var(--color-muted);
+}
+
+p {
+    line-height: 1.7;
+}
+
+/* ===== Navigation ===== */
+
+header {
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+a {
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+section {
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== Layout ===== */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    gap: 3rem;
+}
+
+/* ===== Sections ===== */
+
+section {
+    padding: 2.5rem 0;
+    max-width: 800px;
+}
+
+section {
+    transition: transform 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+}
+
+section+section {
+    border-top: 1px solid var(--color-border);
+}
+
+.hero {
+    max-width: 100%;
+}
+
+section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    max-width: 50ch;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+section p {
+    max-width: 65ch;
+}
+
+.hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* ===== Form ===== */
+
+form {
+    max-width: 500px;
+    display: grid;
+    gap: 1rem;
+    background-color: var(--color-primary-hover);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+label {
+    font-weight: 500;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+}
+
+input,
+textarea {
+    padding: 0.6rem;
+    font: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button {
+    align-self: start;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-primary-hover);
+    color: #fff;
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+    background-color: var(--color-primary-hover)
+}
+
+/* ===== Primary CTA ===== */
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+/* ===== Responsive Enhancements ===== */
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    main section:first-child {
+        grid-column: 1 / -1;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding: 3rem 2rem;
+    }
+}
+
+.card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+/* ✅ ADD THIS BELOW */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.15);
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: #c62828;
+}
+
+input:invalid:focus,
+textarea:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.2);
+}
+
+input:valid,
+textarea:valid {
+    border-color: #2e7d32;
+}
+
+input:valid:focus,
+textarea:valid:focus {
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
+
+/* ===== Card Layout ===== */
+
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 1.75rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===== Footer ===== */
+
+footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
