@@ -1,0 +1,226 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+    --color-text: #222;
+    --color-muted: #555;
+    --color-border: #e5e5e5;
+    --color-bg: #ffffff;
+    --color-surface: #fafafa;
+    --color-primary: #111;
+    --color-primary-hover: #000;
+}
+
+/* ===== BASE / RESET ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+p {
+    line-height: 1.7;
+}
+
+/* ===== HEADER / NAV ===== */
+header {
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== MAIN LAYOUT ===== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    gap: 3rem;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    padding: 2.5rem 0;
+    max-width: 800px;
+}
+
+section+section {
+    border-top: 1px solid var(--color-border);
+}
+
+/* ===== HERO ===== */
+.hero {
+    max-width: 100%;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    max-width: 50ch;
+}
+
+/* ===== CARDS ===== */
+.card-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+/* ===== FORM ===== */
+form {
+    max-width: 500px;
+    display: grid;
+    gap: 1rem;
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+
+label {
+    font-weight: 500;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    font: inherit;
+}
+
+input,
+textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+/* ===== FORM STATES ===== */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(17, 17, 17, 0.15);
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: #c62828;
+}
+
+input:valid,
+textarea:valid {
+    border-color: #2e7d32;
+}
+
+/* ===== FORM NOTES ===== */
+#form-note,
+.form-note {
+    color: #222;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ===== BUTTONS ===== */
+button,
+.btn-primary {
+    display: inline-block;
+    align-self: start;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-primary);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover,
+.btn-primary:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem;
+    text-align: center;
+    color: var(--color-muted);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+
+    main section:first-child {
+        grid-column: 1 / -1;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding: 3rem 2rem;
+    }
+}
