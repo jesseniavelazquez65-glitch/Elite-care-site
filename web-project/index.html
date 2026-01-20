@@ -10,13 +10,13 @@
 
   <title>Elite Care Co. | Compassionate In-Home Care</title>
 
-  <!-- CSS -->
+  <!-- CSS (ONLY HERE) -->
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 
 <body>
 
-  <!-- HEADER / NAV -->
+  <!-- ================= HEADER / NAV ================= -->
   <header>
     <nav aria-label="Primary navigation">
       <ul>
@@ -27,25 +27,26 @@
     </nav>
   </header>
 
-  <!-- MAIN (ONLY ONE) -->
+  <!-- ================= MAIN (ONLY ONE) ================= -->
   <main>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="hero" aria-labelledby="hero-heading">
       <h1 id="hero-heading">
-        Welcome to Elite Care Co.
+        We build bonds and create comfort for our clients
       </h1>
+
       <p>
-        We build bonds and create comfort for every client we serve.
+        Compassionate, professional in-home care you can trust.
       </p>
 
-      <!-- CTA BUTTON -->
+      <!-- PRIMARY CTA -->
       <a href="#request-care" class="btn-primary">
         Request Care
       </a>
     </section>
 
-    <!-- SERVICES -->
+    <!-- WHAT WE DO -->
     <section>
       <h2>What We Do</h2>
 
@@ -71,42 +72,30 @@
     <section id="request-care">
       <h2>Request Care Services</h2>
 
-      <p id="form-note">
+      <!-- Accessible form note -->
+      <p id="form-note" class="form-note">
         All fields are required. We will contact you within 24 hours.
       </p>
 
-      <form id="care-form" aria-describedby="form-note" novalidate>
+      <form id="care-form" action="#" method="post" aria-describedby="form-note">
 
         <label for="name">Full Name</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          autocomplete="name"
-          required />
+        <input id="name" name="name" type="text" autocomplete="name" required />
 
         <label for="email">Email Address</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autocomplete="email"
-          required />
+        <input id="email" name="email" type="email" autocomplete="email" required />
 
         <label for="message">How can we help?</label>
-        <textarea
-          id="message"
-          name="message"
-          required></textarea>
+        <textarea id="message" name="message" required></textarea>
 
         <button type="submit">Submit Request</button>
 
         <p class="form-note">
           We’ll only use your information to respond to your request.
         </p>
-
       </form>
 
+      <!-- Success message (JS controls this) -->
       <p id="form-success" hidden>
         Thank you! Your request has been received. We’ll be in touch shortly.
       </p>
@@ -114,13 +103,21 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
   <footer>
     <p>© 2026 Elite Care Co. All rights reserved.</p>
     <p>Licensed • Insured • Compassionate Care</p>
   </footer>
 
   <!-- JS (ALWAYS LAST) -->
+   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("I28AmPa-CZrRdg_5Y");
+  })();
+</script>
+
   <script src="assets/script.js"></script>
 
 </body>

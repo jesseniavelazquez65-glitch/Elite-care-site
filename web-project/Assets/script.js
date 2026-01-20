@@ -1,28 +1,25 @@
-// ===== DOM READY =====
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Script loaded successfully");
+const form = document.getElementById("care-form");
+const successMessage = document.getElementById("form-success");
 
-  const form = document.getElementById("care-form");
-  const successMessage = document.getElementById("form-success");
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  if (!form) return;
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    // Block submission if invalid
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    // Show success message if it exists
-    if (successMessage) {
-      successMessage.hidden = false;
-      successMessage.focus?.();
-    }
-
-    // Reset form
-    form.reset();
+    emailjs
+      .sendForm(
+        "service_mylgysg",
+        "template_gej60bl",
+        this
+      )
+      .then(
+        () => {
+          form.reset();
+          successMessage.hidden = false;
+        },
+        (error) => {
+          alert("Something went wrong. Please try again.");
+          console.error(error);
+        }
+      );
   });
-});
+}
