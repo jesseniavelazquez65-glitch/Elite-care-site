@@ -23,3 +23,8 @@ if (form) {
       );
   });
 }
+if (form) {
+  form.addEventListener("submit", function () {
+    successMessage.hidden = false;
+  });
+}
