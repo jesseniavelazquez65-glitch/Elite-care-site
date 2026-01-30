@@ -316,3 +316,18 @@ footer {
     font-size: 0.9rem;
     color: var(--color-muted);
 }
+
+/* ===== Utility Classes (DOM Controlled) ===== */
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}

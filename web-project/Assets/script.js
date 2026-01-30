@@ -1,30 +1,41 @@
-const form = document.getElementById("care-form");
-const successMessage = document.getElementById("form-success");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("care-form");
+  const successMessage = document.getElementById("form-success");
 
-if (form) {
-  form.addEventListener("submit", function (e) {
+  // If the page does NOT have a form, stop here (about.html)
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    form.classList.add("loading");
 
     emailjs
       .sendForm(
         "service_mylgysg",
         "template_gej60bl",
-        this
+        form
       )
-      .then(
-        () => {
-          form.reset();
-          successMessage.hidden = false;
-        },
-        (error) => {
-          alert("Something went wrong. Please try again.");
-          console.error(error);
-        }
-      );
+      .then(() => {
+        form.classList.remove("loading");
+        form.reset();
+
+        successMessage.classList.remove("hidden");
+        successMessage.classList.add("show");
+
+        setTimeout(() => {
+          successMessage.classList.remove("show");
+          successMessage.classList.add("hidden");
+        }, 5000);
+      })
+      .catch((error) => {
+        form.classList.remove("loading");
+        alert("Email failed to send: " + error.text);
+      });
   });
-}
-if (form) {
-  form.addEventListener("submit", function () {
-    successMessage.hidden = false;
-  });
-}
+});
