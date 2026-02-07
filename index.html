@@ -162,6 +162,56 @@
   </p>
 </section>
 
+<!-- CLIENT INTAKE FORM -->
+<section class="form-section" id="client-form-section">
+  <h2>Client Intake Request</h2>
+  <p class="form-note">
+    All information is confidential and used solely for care coordination purposes.
+  </p>
+  <p class="form-cta">
+    Complete this form and a member of our care coordination team will contact you within 24 hours.
+  </p>
+
+  <form action="https://formspree.io/f/YOUR_CLIENT_FORM_ID" method="POST">
+
+    <!-- Formspree helpers -->
+    <input type="hidden" name="_subject" value="New Client Intake Request" />
+    <input type="hidden" name="_redirect" value="https://YOURUSERNAME.github.io/Elite-care-site/" />
+
+    <div class="form-grid">
+      <label>
+        Client Full Name
+        <input type="text" name="client_name" required />
+      </label>
+
+      <label>
+        Primary Contact Phone
+        <input type="tel" name="phone" required />
+      </label>
+
+      <label>
+        Email Address
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        City / County (PA)
+        <input type="text" name="location" required />
+      </label>
+    </div>
+
+    <label>
+      Type of Care Needed
+      <textarea name="care_needs" required></textarea>
+    </label>
+
+    <button type="submit">Submit Intake Request</button>
+  </form>
+
+  <p class="success-message">
+    Thank you. A member of our care coordination team will contact you shortly.
+  </p>
+</section>
 
 <!-- CAREGIVER APPLICATION FORM -->
 <section class="form-section" id="job-form-section">
@@ -171,6 +221,11 @@
   </p>
 
   <form action="https://formspree.io/f/xwvneole" method="POST">
+
+    <!-- Formspree helpers -->
+    <input type="hidden" name="_subject" value="New Caregiver Application" />
+    <input type="hidden" name="_redirect" value="https://jesseniavelazquez65-glitch.github.io/Elite-care-site/" />
+
     <div class="form-grid">
       <label>Full Name
         <input type="text" name="full_name" required />
@@ -204,34 +259,6 @@
     Thank you for your interest. Our recruitment team will review your application and contact you if selected.
   </p>
 </section>
-
-  <!-- CAREGIVER APPLICATION -->
-  <section class="form-section alt" id="job-form-section">
-    <h2>Caregiver Opportunities</h2>
-    <p class="form-intro">
-      We are building a professional care team where caregivers are respected,
-      supported, and empowered to deliver exceptional service.
-    </p>
-    <p class="form-note">All applications are confidential.</p>
-    <p class="form-cta">Submit your application today and join our team of elite caregivers.</p>
-
-    <form id="job-form" action="https://formspree.io/f/xgolwkoq" method="POST">
-
-      <div class="form-grid">
-        <label>Full Name<input type="text" required /></label>
-        <label>Phone Number<input type="tel" required /></label>
-        <label>Email Address<input type="email" required /></label>
-        <label>Certifications (CNA, HHA, etc.)<input type="text" required /></label>
-      </div>
-      <label>Care Experience & Availability<textarea required></textarea></label>
-      <button type="submit">Apply to Elite Care</button>
-    </form>
-
-    <p class="success-message" id="job-success">
-      Application received. Our recruitment team will be in touch.
-    </p>
-  </section>
-
   <!-- COMPLIANCE -->
   <section class="content compliance">
     <h2>Compliance & Professional Responsibility</h2>
