@@ -163,28 +163,38 @@
 </section>
 
 
-  <!-- CLIENT INTAKE FORM -->
-  <section class="form-section" id="client-form-section">
-    <h2>Client Intake Request</h2>
-    <p class="form-note">All information is confidential and processed in accordance with PA regulations.</p>
-    <p class="form-cta">Complete this form and our team will contact you within 24 hours.</p>
+ <!-- CLIENT INTAKE FORM -->
+<section class="form-section" id="client-form-section">
+  <h2>Client Intake Request</h2>
+  <p class="form-note">All information is confidential and processed in accordance with PA regulations.</p>
+  <p class="form-cta">Complete this form and our team will contact you within 24 hours.</p>
 
-    <form id="client-form" action="https://formspree.io/f/xwvneole" method="POST">
+  <form id="client-form" action="https://formspree.io/f/xwvneole" method="POST">
+    <div class="form-grid">
+      <label>Client Full Name
+        <input type="text" name="full_name" required />
+      </label>
+      <label>Primary Contact Phone
+        <input type="tel" name="phone" required />
+      </label>
+      <label>Email Address
+        <input type="email" name="email" required />
+      </label>
+      <label>County / City (PA)
+        <input type="text" name="location" required />
+      </label>
+    </div>
+    <label>Type of Care Needed
+      <textarea name="care_type" required></textarea>
+    </label>
+    <button type="submit">Submit Intake Request</button>
+  </form>
 
-      <div class="form-grid">
-        <label>Client Full Name<input type="text" required /></label>
-        <label>Primary Contact Phone<input type="tel" required /></label>
-        <label>Email Address<input type="email" required /></label>
-        <label>County / City (PA)<input type="text" required /></label>
-      </div>
-      <label>Type of Care Needed<textarea required></textarea></label>
-      <button type="submit">Submit Intake Request</button>
-    </form>
+  <p class="success-message" id="client-success">
+    Thank you. A member of our care coordination team will contact you shortly.
+  </p>
+</section>
 
-    <p class="success-message" id="client-success">
-      Thank you. A member of our care coordination team will contact you shortly.
-    </p>
-  </section>
 
   <!-- CAREGIVER APPLICATION -->
   <section class="form-section alt" id="job-form-section">
