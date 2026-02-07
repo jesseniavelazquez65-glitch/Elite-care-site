@@ -174,35 +174,58 @@
 
   <form action="https://formspree.io/f/YOUR_CLIENT_FORM_ID" method="POST">
 
-    <!-- Formspree helpers -->
     <input type="hidden" name="_subject" value="New Client Intake Request" />
     <input type="hidden" name="_redirect" value="https://YOURUSERNAME.github.io/Elite-care-site/" />
 
     <div class="form-grid">
       <label>
         Client Full Name
-        <input type="text" name="client_name" required />
+        <input
+          type="text"
+          name="client_name"
+          autocomplete="name"
+          required
+        />
       </label>
 
       <label>
         Primary Contact Phone
-        <input type="tel" name="phone" required />
+        <input
+          type="tel"
+          name="phone"
+          autocomplete="tel"
+          required
+        />
       </label>
 
       <label>
         Email Address
-        <input type="email" name="email" required />
+        <input
+          type="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
       </label>
 
       <label>
         City / County (PA)
-        <input type="text" name="location" required />
+        <input
+          type="text"
+          name="location"
+          autocomplete="address-level2"
+          required
+        />
       </label>
     </div>
 
     <label>
       Type of Care Needed
-      <textarea name="care_needs" required></textarea>
+      <textarea
+        name="care_needs"
+        autocomplete="off"
+        required
+      ></textarea>
     </label>
 
     <button type="submit">Submit Intake Request</button>
