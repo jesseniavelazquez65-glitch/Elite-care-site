@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+  <Gather numDigits="1" action="https://handler.twilio.com/twiml/YOUR_DIGIT_ROUTER_URL" method="POST">
+    <Say voice="alice">
+      Thank you for calling Elite Care Home Health Agency.
+      For client services, press 1.
+      For employment opportunities, press 2.
+      To speak directly with a representative, press 3.
+    </Say>
+  </Gather>
+  <Say>No selection received. Connecting you now.</Say>
+  <Dial>+14842019438</Dial>
+</Response>
