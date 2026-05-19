@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+    Client Management | Elite Care
+</title>
+
+<link rel="stylesheet" href="css/styles.css">
+
+<script defer src="js/script.js"></script>
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <h2>
+                Elite Care
+            </h2>
+
+            <p>
+                Client Management
+            </p>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="admin-dashboard.html">
+
+                ← Return to Dashboard
+
+            </a>
+
+            <a href="#activeClients">
+
+                Active Clients
+
+            </a>
+
+            <a href="#transportation">
+
+                Transportation Support
+
+            </a>
+
+            <a href="#memberships">
+
+                Membership Status
+
+            </a>
+
+            <a href="#assignments">
+
+                Caregiver Assignments
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="dashboard-main">
+
+        <!-- TOPBAR -->
+
+        <section class="dashboard-topbar">
+
+            <div>
+
+                <h1>
+                    Client Management Center
+                </h1>
+
+                <p>
+                    Review client activity,
+                    memberships,
+                    transportation coordination,
+                    scheduling,
+                    and caregiver assignments.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ACTIVE CLIENTS -->
+
+        <section
+            class="dashboard-section"
+            id="activeClients"
+        >
+
+            <h2>
+                Active Clients
+            </h2>
+
+            <div class="portal-preview">
+
+                <!-- CLIENT -->
+
+                <div class="portal-box">
+
+                    <h3>
+                        Maria Rodriguez
+                    </h3>
+
+                    <p>
+                        Membership:
+                        Essential Active
+                    </p>
+
+                    <p>
+                        Assigned Caregiver:
+                        Sarah M.
+                    </p>
+
+                    <p>
+                        Transportation:
+                        Active
+                    </p>
+
+                    <p class="status-confirmed">
+                        ● Active Client
+                    </p>
+
+                    <div
+                        style="
+                            display:flex;
+                            gap:10px;
+                            flex-wrap:wrap;
+                            margin-top:18px;
+                        "
+                    >
+
+                        <button>
+
+                            View Profile
+
+                        </button>
+
+                        <button>
+
+                            Edit Schedule
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- CLIENT -->
+
+                <div class="portal-box">
+
+                    <h3>
+                        Robert Thomas
+                    </h3>
+
+                    <p>
+                        Membership:
+                        Priority Active
+                    </p>
+
+                    <p>
+                        Assigned Caregiver:
+                        Pending Match
+                    </p>
+
+                    <p>
+                        Transportation:
+                        Not Active
+                    </p>
+
+                    <p class="status-pending">
+                        ● Awaiting Assignment
+                    </p>
+
+                    <div
+                        style="
+                            display:flex;
+                            gap:10px;
+                            flex-wrap:wrap;
+                            margin-top:18px;
+                        "
+                    >
+
+                        <button>
+
+                            Assign Caregiver
+
+                        </button>
+
+                        <button class="delete-request-btn">
+
+                            Suspend Access
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TRANSPORTATION -->
+
+        <section
+            class="dashboard-section"
+            id="transportation"
+        >
+
+            <h2>
+                Transportation Coordination
+            </h2>
+
+            <div class="portal-preview">
+
+                <div class="portal-box">
+
+                    <h3>
+                        Upcoming Appointment
+                    </h3>
+
+                    <p>
+                        Friday • 9:00 AM
+                    </p>
+
+                    <p>
+                        Camden Cardiology Associates
+                    </p>
+
+                    <p>
+                        Suite 204
+                    </p>
+
+                    <p class="status-confirmed">
+                        ● Transportation Confirmed
+                    </p>
+
+                </div>
+
+                <div class="portal-box">
+
+                    <h3>
+                        Verification Upload
+                    </h3>
+
+                    <p>
+                        Appointment reminder
+                        uploaded successfully.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MEMBERSHIPS -->
+
+        <section
+            class="dashboard-section"
+            id="memberships"
+        >
+
+            <h2>
+                Membership Status
+            </h2>
+
+            <div class="dashboard-stats">
+
+                <div class="dashboard-stat-card">
+
+                    <h3>
+                        Active Memberships
+                    </h3>
+
+                    <p>
+                        12
+                    </p>
+
+                </div>
+
+                <div class="dashboard-stat-card">
+
+                    <h3>
+                        Overdue Accounts
+                    </h3>
+
+                    <p>
+                        2
+                    </p>
+
+                </div>
+
+                <div class="dashboard-stat-card">
+
+                    <h3>
+                        Suspended Accounts
+                    </h3>
+
+                    <p>
+                        1
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ASSIGNMENTS -->
+
+        <section
+            class="dashboard-section"
+            id="assignments"
+        >
+
+            <h2>
+                Caregiver Assignments
+            </h2>
+
+            <div class="portal-preview">
+
+                <div class="portal-box">
+
+                    <h3>
+                        Sarah M.
+                    </h3>
+
+                    <p>
+                        Assigned to:
+                        Maria Rodriguez
+                    </p>
+
+                    <p>
+                        Monday-Friday
+                    </p>
+
+                    <p class="status-confirmed">
+                        ● Assignment Active
+                    </p>
+
+                </div>
+
+                <div class="portal-box">
+
+                    <h3>
+                        Open Assignment
+                    </h3>
+
+                    <p>
+                        Companion Support
+                    </p>
+
+                    <p>
+                        Cherry Hill, NJ
+                    </p>
+
+                    <p class="status-pending">
+                        ● Awaiting Caregiver
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

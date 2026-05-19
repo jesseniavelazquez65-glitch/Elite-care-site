@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Client Portal | Elite Care</title>
+
+<link rel="stylesheet" href="css/styles.css">
+<script defer src="js/script.js"></script>
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <h2>Elite Care</h2>
+
+            <p>
+                Client Portal
+            </p>
+
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#overview">
+                Dashboard Overview
+            </a>
+
+            <a href="#upcoming">
+                Upcoming Visits
+            </a>
+
+            <a href="#scheduler">
+                Scheduling Center
+            </a>
+
+            <a href="#requests">
+                Care Requests
+            </a>
+
+            <a href="#billing">
+                Billing
+            </a>
+
+            <a href="#communication">
+                Communication
+            </a>
+
+            <a href="#adjustments">
+                Care Adjustments
+            </a>
+
+            <a href="#settings">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="dashboard-main">
+
+        <!-- TOPBAR -->
+
+        <section class="dashboard-topbar">
+
+            <div>
+
+                <h1>
+                    Welcome to Your Client Portal
+                </h1>
+
+                <p>
+                    Manage scheduling, billing,
+                    caregiver coordination,
+                    and support requests through
+                    your Elite Care dashboard.
+                </p>
+
+            </div>
+
+            <button onclick="window.location.href='index.html'">
+
+                Return to Website
+
+            </button>
+
+        </section>
+
+        <!-- OVERVIEW -->
+
+        <section
+            class="dashboard-section"
+            id="overview"
+        >
+
+            <div class="dashboard-stats">
+
+                <div class="dashboard-stat-card">
+
+                    <h3>
+                        Membership Status
+                    </h3>
+
+                    <p>
+                        Essential Active
+                    </p>
+
+                </div>
+
+                <div class="dashboard-stat-card">
+
+                    <h3>
+                        Upcoming Visits
+                    </h3>
+
+                    <p>
+                        3 Scheduled
+                    </p>
+
+                </div>
+
+                <div class="dashboard-stat-card">
+
+                    <h3>
+                        Pending Requests
+                    </h3>
+
+                    <p>
+                        1 Pending Review
+                    </p>
+
+                </div>
+
+                <div class="dashboard-stat-card">
+
+                    <h3>
+                        Assigned Caregiver
+                    </h3>
+
+                    <p>
+                        Sarah M.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- UPCOMING VISITS -->
+
+        <section
+            class="dashboard-section"
+            id="upcoming"
+        >
+
+            <h2>
+                Upcoming Visits
+            </h2>
+
+            <div class="portal-preview">
+
+                <div class="portal-box">
+
+                    <h3>
+                        Monday Care Visit
+                    </h3>
+
+                    <p>
+                        8:00 AM - 2:00 PM
+                    </p>
+
+                    <p class="status-confirmed">
+                        ● Confirmed & Assigned
+                    </p>
+
+                </div>
+
+                <div class="portal-box">
+
+                    <h3>
+                        Wednesday Appointment Support
+                    </h3>
+
+                    <p>
+                        10:00 AM - 1:00 PM
+                    </p>
+
+                    <p class="status-pending">
+                        ● Pending Approval
+                    </p>
+
+                </div>
+
+                <div class="portal-box">
+
+                    <h3>
+                        Transportation Support
+                    </h3>
+
+                    <p>
+                        Transportation assistance
+                        has been scheduled.
+                    </p>
+
+                    <p class="status-confirmed">
+                        ● Confirmed
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SCHEDULING CENTER -->
+
+        <section
+            class="dashboard-section"
+            id="scheduler"
+        >
+
+            <h2>
+                Scheduling Center
+            </h2>
+
+            <div class="calendar-system">
+
+                <!-- CALENDAR -->
+
+                <div class="calendar-container">
+
+                    <!-- TOPBAR -->
+
+                    <div class="calendar-topbar">
+
+                        <button class="calendar-arrow">
+                            ←
+                        </button>
+
+                        <h3>
+                            May 2026
+                        </h3>
+
+                        <button class="calendar-arrow">
+                            →
+                        </button>
+
+                    </div>
+
+                    <!-- WEEKDAYS -->
+
+                    <div class="calendar-weekdays">
+
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+
+                    </div>
+
+                    <!-- CALENDAR GRID -->
+
+                    <div class="calendar-grid-large">
+
+                        <!-- ROW 1 -->
+
+                        <div class="calendar-day-large empty"></div>
+                        <div class="calendar-day-large empty"></div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                1
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                2
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large confirmed-day">
+
+                            <span class="calendar-number">
+                                3
+                            </span>
+
+                            <div class="calendar-event confirmed-event">
+
+                                Care Visit
+
+                            </div>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                4
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large pending-day">
+
+                            <span class="calendar-number">
+                                5
+                            </span>
+
+                            <div class="calendar-event pending-event">
+
+                                Pending Review
+
+                            </div>
+
+                        </div>
+
+                        <!-- ROW 2 -->
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                6
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                7
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large confirmed-day">
+
+                            <span class="calendar-number">
+                                8
+                            </span>
+
+                            <div class="calendar-event confirmed-event">
+
+                                Transportation
+
+                            </div>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                9
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                10
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                11
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                12
+                            </span>
+
+                        </div>
+
+                        <!-- ROW 3 -->
+
+                        <div class="calendar-day-large pending-day">
+
+                            <span class="calendar-number">
+                                13
+                            </span>
+
+                            <div class="calendar-event pending-event">
+
+                                Appointment Support
+
+                            </div>
+
+                        </div>
+
+                        <div class="calendar-day-large active-day">
+
+                            <span class="calendar-number">
+                                14
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                15
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                16
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                17
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                18
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                19
+                            </span>
+
+                        </div>
+
+                        <!-- ROW 4 -->
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                20
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                21
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                22
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                23
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                24
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                25
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                26
+                            </span>
+
+                        </div>
+
+                        <!-- ROW 5 -->
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                27
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                28
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                29
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                30
+                            </span>
+
+                        </div>
+
+                        <div class="calendar-day-large">
+
+                            <span class="calendar-number">
+                                31
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- DETAILS PANEL -->
+
+                <div class="calendar-details-panel">
+
+                    <h3>
+                        Thursday, May 14
+                    </h3>
+
+                    <p class="status-pending">
+                        ● Pending Review
+                    </p>
+
+                    <form>
+
+                        <div class="form-grid">
+
+                            <label>
+
+                                Start Time
+
+                                <input type="time">
+
+                            </label>
+
+                            <label>
+
+                                End Time
+
+                                <input type="time">
+
+                            </label>
+
+                        </div>
+
+<div class="form-grid">
+
+    <label>
+
+        Appointment Details
+
+        <input
+            type="text"
+            id="appointmentDetails"
+            placeholder="Example: Cardiology Appointment"
+        >
+
+    </label>
+
+    <label>
+
+        Client Full Name
+
+        <input
+            type="text"
+            id="clientName"
+            placeholder="Enter full client name"
+        >
+
+    </label>
+
+</div>
+
+<div class="form-grid">
+
+    <label>
+
+        Appointment Time
+
+        <input
+            type="time"
+            id="appointmentTime"
+        >
+
+    </label>
+
+    <label>
+
+        Appointment Address
+
+        <input
+            type="text"
+            id="appointmentAddress"
+            placeholder="Street, City, State"
+        >
+
+    </label>
+
+</div>
+
+                        <!-- SUPPORT OPTIONS -->
+
+                        <div class="addons-section">
+
+                            <h3>
+                                Additional Support
+                            </h3>
+
+                            <div class="addons-grid">
+
+<label class="addon-item">
+
+    <input
+        type="checkbox"
+        id="transportationNeeded"
+    >
+
+    Transportation Assistance
+
+</label>
+
+                                <label class="addon-item">
+
+                                    <input type="checkbox">
+
+                                    Overnight Support
+
+                                </label>
+
+                                <label class="addon-item">
+
+                                    <input type="checkbox">
+
+                                    Wheelchair Assistance
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+<label>
+
+    Care Notes
+
+    <textarea
+        id="careNotes"
+        placeholder="Add caregiver instructions or support notes..."
+    ></textarea>
+
+</label>
+
+                        <!-- ESTIMATE -->
+
+                        <div class="estimate-box">
+
+                            <h3>
+                                Estimated Summary
+                            </h3>
+
+                            <div class="estimate-grid">
+
+                                <div>
+
+                                    <span>
+                                        Weekly Estimate
+                                    </span>
+
+                                    <strong>
+                                        $650
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Monthly Estimate
+                                    </span>
+
+                                    <strong>
+                                        $2,600
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+<button
+    type="button"
+    id="deleteRequestBtn"
+    class="delete-request-btn"
+>
+
+    Delete Request
+
+</button>
+                        <button type="submit">
+
+                            Save Scheduling Request
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CARE REQUESTS -->
+
+        <section
+            class="dashboard-section"
+            id="requests"
+        >
+
+            <h2>
+                Care Requests
+            </h2>
+
+            <div class="portal-card">
+
+                <form>
+
+                    <label>
+
+                        Support Request
+
+                        <textarea
+                            placeholder="Describe any accommodations, caregiver preferences, or support requests..."
+                        ></textarea>
+
+                    </label>
+
+                    <button type="submit">
+
+                        Submit Request
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- BILLING -->
+
+        <section
+            class="dashboard-section"
+            id="billing"
+        >
+
+            <h2>
+                Billing & Membership
+            </h2>
+
+            <div class="portal-card">
+
+                <div class="dashboard-stats">
+
+                    <div class="dashboard-stat-card">
+
+                        <h3>
+                            Membership Plan
+                        </h3>
+
+                        <p>
+                            Essential Membership
+                        </p>
+
+                    </div>
+
+                    <div class="dashboard-stat-card">
+
+                        <h3>
+                            Billing Status
+                        </h3>
+
+                        <p>
+                            Active
+                        </p>
+
+                    </div>
+
+                    <div class="dashboard-stat-card">
+
+                        <h3>
+                            Next Billing Date
+                        </h3>
+
+                        <p>
+                            June 1, 2026
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- COMMUNICATION -->
+
+        <section
+            class="dashboard-section"
+            id="communication"
+        >
+
+            <h2>
+                Communication Center
+            </h2>
+
+            <div class="portal-card">
+
+                <form>
+
+                    <label>
+
+                        Secure Message
+
+                        <textarea
+                            placeholder="Send a message to Elite Care coordination..."
+                        ></textarea>
+
+                    </label>
+
+                    <button type="submit">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- CARE ADJUSTMENTS -->
+
+        <section
+            class="dashboard-section"
+            id="adjustments"
+        >
+
+            <h2>
+                Care Adjustments
+            </h2>
+
+            <div class="portal-card">
+
+                <form>
+
+                    <label>
+
+                        Adjustment Request
+
+                        <textarea
+                            placeholder="Describe any caregiver changes or scheduling adjustments..."
+                        ></textarea>
+
+                    </label>
+
+                    <button type="submit">
+
+                        Submit Adjustment
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- SETTINGS -->
+
+        <section
+            class="dashboard-section"
+            id="settings"
+        >
+
+            <h2>
+                Account Settings
+            </h2>
+
+            <div class="portal-card">
+
+                <div class="form-grid">
+
+                    <label>
+
+                        Emergency Contact
+
+                        <input
+                            type="text"
+                            placeholder="Enter contact name"
+                        >
+
+                    </label>
+
+                    <label>
+
+                        Emergency Phone
+
+                        <input
+                            type="tel"
+                            placeholder="Enter phone number"
+                        >
+
+                    </label>
+
+                    <label>
+
+                        Preferred Notifications
+
+                        <select>
+
+                            <option>
+                                Email & SMS
+                            </option>
+
+                            <option>
+                                Email Only
+                            </option>
+
+                            <option>
+                                SMS Only
+                            </option>
+
+                        </select>
+
+                    </label>
+
+                </div>
+
+                <button>
+
+                    Save Settings
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
